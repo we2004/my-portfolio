@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #B0C4B1;
+    padding: 30px
+
+}
+
+.roboto-font {
+    font-family: "Roboto", sans-serif;
+}
+
+.roboto-slab-font {
+    font-family: "Roboto Slab", serif;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-cards-flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.website-title {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+header {
+    color: #4A5759;
+    margin-bottom: 30px;
+    max-width: 600px;
+    text-align: center;
+
+}
+
+.card {
+    background-color: #DEDBD2;
+}
+
+.card-title,
+.card-text {
+    color: #4A5759;
+}
+
+a {
+    color: #ce7c88;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.website-link {
+    margin-left: 5px;
+}
