@@ -49,8 +49,8 @@ export const projects = [{
 }, {
     name: 'Projects Portfolio',
     about: 'A portfolio that shows a collection of web development projects that I have built.',
-    githubLink: 'https://github.com/we2004/web-projects-portfolio.git',
-    websiteLink: 'https://wesal-projects-page.netlify.app/',
+    githubLink: 'https://github.com/we2004/my-portfolio.git',
+    websiteLink: 'https://we2004.github.io/my-portfolio/',
     image: 'images/projectsweb.png'
 }, {
     name: 'Anime Landing Page',
