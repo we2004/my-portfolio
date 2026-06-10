@@ -20,7 +20,7 @@ export const projects = [
     about:
       "Allows users to search for the weather in any city, view current conditions and a 7-day forecast, and toggle between Celsius and Fahrenheit.",
     githubLink: "https://github.com/we2004/weather-dashboard-desktop-app.git",
-    websiteLink: "https://weather-dashboard-app-wesal.netlify.app/",
+    websiteLink: "https://weather-dashboard-wesal.netlify.app/",
     image: "images/weather.png"
   },
   {
