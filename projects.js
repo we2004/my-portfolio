@@ -1,5 +1,13 @@
 export const projects = [
   {
+    name: "React Weather App",
+    about:
+      "A React weather dashboard that fetches real-time weather data.",
+    githubLink: "https://github.com/we2004/weather-app",
+    websiteLink: "https://w9eather-app-react.netlify.app/",
+    image: "images/weatherDashboard.png"
+  },
+  {
     name: "Movie.w Explorer",
     about:
       "Movie W Explorer is a movie browsing web app that lets users explore, search, and view detailed information about movies",
@@ -16,27 +24,11 @@ export const projects = [
     image: "images/space.png"
   },
   {
-    name: "Weather Desktop App",
-    about:
-      "Allows users to search for the weather in any city, view current conditions and a 7-day forecast, and toggle between Celsius and Fahrenheit.",
-    githubLink: "https://github.com/we2004/weather-dashboard-desktop-app.git",
-    websiteLink: "https://weather-dashboard-wesal.netlify.app/",
-    image: "images/weather.png"
-  },
-  {
     name: "Guess the Secret Number",
     about:
       "A simple web-based game where players try to guess a randomly generated number between 1 and 20 within a limited number of attempts.",
     githubLink: "https://github.com/we2004/guess-secret-number.git",
     websiteLink: "https://guessing-the-secret-number.netlify.app/",
     image: "images/secretNumber.png"
-  },
-  {
-    name: "Anime Landing Page",
-    about:
-      "used bootstrap , css and html to create a simple landing page for an anime and manga website.",
-    githubLink: "https://github.com/we2004/AnimeManga-lnadingPage.git",
-    websiteLink: "https://we2004.github.io/AnimeManga-lnadingPage/",
-    image: "images/animeweb.png"
   }
 ]
