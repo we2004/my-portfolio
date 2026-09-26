@@ -1,15 +1,16 @@
 import Header from "./Header"
 import Hero from "./Hero"
 import ProgressBar from "./ProgressBar"
+import SelectedWork from "./SelectedWork"
 
 export function MainExperience() {
   return (
     <>
       <Header />
       <ProgressBar />
-      <main >
+      <main>
         <Hero />
-        {/* Add <SelectedWork /> here when the Selected Work section is built. */}
+        <SelectedWork />
         {/* Add <Skills /> here when the Skills section is built. */}
         {/* Add <BeyondCode /> here when the Community section is built. */}
         {/* Add <Contact /> here when the Contact section is built. */}

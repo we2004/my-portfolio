@@ -101,7 +101,7 @@ export function Hero() {
       <div className="flex flex-1 items-end justify-center pb-2">
         <a
           className="flex flex-col items-center gap-2 font-ui text-[10px] text-foreground/60 sm:text-xs"
-          href="#projects"
+          href="#work"
         >
           <span className="text-accent">SCROLL TO EXPLORE</span>
           {/* This is the only looping motion in Hero; reduced motion keeps it static. */}

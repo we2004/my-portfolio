@@ -50,3 +50,50 @@ body,
   --radius-md: var(--token-radius-md);
   --radius-lg: var(--token-radius-lg);
 }
+
+.project-card-perspective {
+  perspective: 1100px;
+}
+
+.project-card-flipper {
+  transform-style: preserve-3d;
+}
+
+.project-card-face {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.project-card-face--back {
+  transform: rotateY(180deg);
+}
+
+.project-card-face::before,
+.project-card-face::after {
+  position: absolute;
+  z-index: 20;
+  inline-size: 5px;
+  block-size: 5px;
+  background-color: var(--token-color-accent);
+  content: "";
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.project-card-face::before {
+  inset-block-start: 12px;
+  inset-inline-start: 12px;
+}
+
+.project-card-face::after {
+  inset-block-end: 12px;
+  inset-inline-end: 12px;
+}
+
+.project-card-texture {
+  background-image: radial-gradient(
+    color-mix(in srgb, var(--token-color-fg) 6%, transparent) 0.7px,
+    transparent 0.7px
+  );
+  background-size: 14px 14px;
+}

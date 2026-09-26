@@ -16,7 +16,7 @@ interface RegisteredSection extends SectionBoundary {
 const SECTION_BOUNDARIES: SectionBoundary[] = [
   { id: "intro", start: 0, end: 10 },
   { id: "hero", start: 10, end: 20 },
-  { id: "projects", start: 20, end: 50 },
+  { id: "work", start: 20, end: 50 },
   { id: "skills", start: 50, end: 70 },
   { id: "community", start: 70, end: 82 },
   { id: "contact", start: 82, end: 92 }

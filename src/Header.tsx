@@ -2,7 +2,7 @@ import { useReducedMotion } from "motion/react"
 import type { MouseEvent } from "react"
 
 const NAV_ITEMS = [
-  { label: "WORK", sectionId: "projects" },
+  { label: "WORK", sectionId: "work" },
   { label: "SKILLS", sectionId: "skills" },
   { label: "COMMUNITY", sectionId: "community" },
   { label: "CONTACT", sectionId: "contact" }
