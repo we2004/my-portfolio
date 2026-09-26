@@ -95,6 +95,7 @@ export function Intro({ onComplete }: IntroProps) {
 
   return (
     <section
+      id="intro"
       aria-label="Loading introduction"
       className="flex min-h-screen items-center justify-center bg-background px-4 text-center text-foreground sm:px-6"
     >

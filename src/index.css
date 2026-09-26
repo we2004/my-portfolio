@@ -33,6 +33,13 @@
   --token-radius-lg: 16px;
 }
 
+html,
+body,
+#root {
+  min-height: 100vh;
+  background-color: var(--token-color-bg);
+}
+
 @theme inline {
   --color-background: var(--token-color-bg);
   --color-foreground: var(--token-color-fg);
