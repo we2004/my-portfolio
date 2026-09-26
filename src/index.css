@@ -1,1 +1,37 @@
-@import 'tailwindcss';
+/*
+ * Single source of truth for color, typography, and radius tokens.
+ * Components must not hardcode hex colors or font-family strings; use the
+ * generated Tailwind utilities (bg-background, text-accent, font-display, etc.).
+ *
+ * font-display: major headings, loading/progress states, and large visual
+ * statements only. Never use it for body text or paragraphs.
+ * font-ui: body copy, labels, buttons, navigation, and metadata.
+ * Accent: use sparingly for highlights, CTAs, and active/interactive states;
+ * never use it as a dominant background or large surface color.
+ * Default to rounded-md for cards, buttons, and badges unless a component
+ * intentionally needs a sharp edge.
+ */
+
+@import "tailwindcss";
+
+:root {
+  --token-color-bg: #000814;
+  --token-color-fg: #ffffff;
+  --token-color-accent: #ffc300;
+  --token-font-display: "Press Start 2P", system-ui;
+  --token-font-ui: "Silkscreen", sans-serif;
+  --token-radius-sm: 4px;
+  --token-radius-md: 8px;
+  --token-radius-lg: 16px;
+}
+
+@theme inline {
+  --color-background: var(--token-color-bg);
+  --color-foreground: var(--token-color-fg);
+  --color-accent: var(--token-color-accent);
+  --font-display: var(--token-font-display);
+  --font-ui: var(--token-font-ui);
+  --radius-sm: var(--token-radius-sm);
+  --radius-md: var(--token-radius-md);
+  --radius-lg: var(--token-radius-lg);
+}
