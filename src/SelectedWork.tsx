@@ -3,7 +3,7 @@ import type { ReactNode } from "react"
 import ProjectCard from "./ProjectCard"
 import { projects } from "./data/projects"
 
-function RevealOnScroll({ children }: { children: ReactNode }) {
+export function RevealOnScroll({ children }: { children: ReactNode }) {
   const prefersReducedMotion = useReducedMotion()
 
   return (

@@ -2,6 +2,7 @@ import Header from "./Header"
 import Hero from "./Hero"
 import ProgressBar from "./ProgressBar"
 import SelectedWork from "./SelectedWork"
+import Skills from "./Skills"
 
 export function MainExperience() {
   return (
@@ -11,7 +12,7 @@ export function MainExperience() {
       <main>
         <Hero />
         <SelectedWork />
-        {/* Add <Skills /> here when the Skills section is built. */}
+        <Skills />
         {/* Add <BeyondCode /> here when the Community section is built. */}
         {/* Add <Contact /> here when the Contact section is built. */}
         {/* Add <FinalLoading /> here when the final loading sequence is built. */}
