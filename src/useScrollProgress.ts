@@ -8,21 +8,23 @@ interface SectionBoundary {
 
 interface RegisteredSection extends SectionBoundary {
   top: number
+  progressEndPosition?: number
 }
 
 // Adjust these progress ranges as the page sections and their relative weights settle.
 // Sections register by using the matching id; missing sections are skipped and their ranges
-// are interpolated across the registered neighbors. FINAL (92–100%) is intentionally excluded.
+// are interpolated across the registered neighbors. The final-loading section completes the range.
 const SECTION_BOUNDARIES: SectionBoundary[] = [
   { id: "intro", start: 0, end: 10 },
   { id: "hero", start: 10, end: 20 },
   { id: "work", start: 20, end: 50 },
   { id: "skills", start: 50, end: 70 },
   { id: "community", start: 70, end: 82 },
-  { id: "contact", start: 82, end: 92 }
+  { id: "contact", start: 82, end: 92 },
+  { id: "final-loading", start: 92, end: 100 }
 ]
 
-const MAX_SCROLL_PROGRESS = 92
+const MAX_SCROLL_PROGRESS = 100
 
 function getScrollProgress(): number {
   const sections: RegisteredSection[] = SECTION_BOUNDARIES.flatMap(
@@ -30,10 +32,18 @@ function getScrollProgress(): number {
       const element = document.getElementById(boundary.id)
       if (!element) return []
 
+      const configuredStart = Number(element.dataset.scrollProgressStart)
+      const configuredEnd = Number(element.dataset.scrollProgressEnd)
+
       return [
         {
           ...boundary,
-          top: element.getBoundingClientRect().top + window.scrollY
+          top: Number.isFinite(configuredStart)
+            ? configuredStart
+            : element.getBoundingClientRect().top + window.scrollY,
+          progressEndPosition: Number.isFinite(configuredEnd)
+            ? configuredEnd
+            : undefined
         }
       ]
     }
@@ -53,12 +63,25 @@ function getScrollProgress(): number {
 
   const activeSection = sections[activeIndex]
   const nextSection = sections[activeIndex + 1]
+
+  // Reduced motion skips the final pin and presents its completed state immediately.
+  if (
+    activeSection.id === "final-loading" &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  ) {
+    return 100
+  }
+
   const maxScrollPosition = Math.max(
     document.documentElement.scrollHeight - window.innerHeight,
     0
   )
-  const segmentEndPosition = nextSection?.top ?? maxScrollPosition
-  const segmentEndProgress = nextSection?.start ?? activeSection.end
+  const segmentEndPosition =
+    activeSection.progressEndPosition ?? nextSection?.top ?? maxScrollPosition
+  const segmentEndProgress =
+    activeSection.progressEndPosition !== undefined
+      ? activeSection.end
+      : (nextSection?.start ?? activeSection.end)
 
   // A viewport-filling final section may have no scroll interval; keep its start value stable.
   if (segmentEndPosition <= activeSection.top) {

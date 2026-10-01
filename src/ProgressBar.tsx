@@ -1,8 +1,11 @@
 import { useScrollProgress } from "./useScrollProgress"
 
+const SUCCESS_GREEN = "#54c77b"
+
 export function ProgressBar() {
   const progress = useScrollProgress()
   const roundedProgress = Math.round(progress)
+  const isComplete = progress >= 100
 
   return (
     <div
@@ -15,8 +18,11 @@ export function ProgressBar() {
       role="progressbar"
     >
       <div
-        className="h-full bg-accent transition-[width] duration-200 ease-out motion-reduce:transition-none"
-        style={{ width: `${progress}%` }}
+        className="h-full bg-accent transition-[width,background-color] duration-200 ease-out motion-reduce:transition-none"
+        style={{
+          width: `${progress}%`,
+          backgroundColor: isComplete ? SUCCESS_GREEN : undefined
+        }}
       />
     </div>
   )
