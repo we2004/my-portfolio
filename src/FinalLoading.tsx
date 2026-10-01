@@ -6,10 +6,10 @@ import { useScrollProgress } from "./useScrollProgress"
 
 gsap.registerPlugin(ScrollTrigger)
 
-// Percentage steps are 92/95/98/100; finish progress at 72%, reveal both messages, then hold for 12%.
+// Percentage steps count through every integer 92-100; finish progress at 72%, reveal both messages, then hold for 12%.
 const SCROLL_CONFIG = {
   initialPercentage: 92,
-  percentageSteps: [95, 98, 100],
+  percentageSteps: [93, 94, 95, 96, 97, 98, 99, 100],
   pinLength: 1.35,
   progressCompleteAt: 0.72,
   completeTextStart: 0.72,

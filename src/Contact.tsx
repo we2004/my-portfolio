@@ -54,9 +54,7 @@ export function Contact(): React.JSX.Element {
         <ul className="mx-auto flex max-w-3xl flex-col gap-3 sm:gap-4">
           {social.map((entry: SocialLink) => {
             const isEmail = entry.url.startsWith("mailto:")
-            // const value = isEmail
-            //   ? entry.url.slice("mailto:".length)
-            //   : entry.url.replace(/^https?:\/\//, "")
+           
             const content = (
               <>
                 <img

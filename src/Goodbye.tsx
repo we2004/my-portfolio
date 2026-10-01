@@ -52,7 +52,7 @@ export function Goodbye(): React.JSX.Element {
             src={meImg}
             alt=""
             aria-hidden="true"
-            className="size-48 max-h-[38vh] max-w-[72vw] object-contain sm:size-56 sm:max-h-[42vh] sm:max-w-[60vw] md:size-64 md:max-h-[46vh] md:max-w-[40vw] lg:size-72 lg:max-w-[30vw] xl:size-80 xl:max-h-[50vh]"
+            className=" size-24 max-h-[38vh] max-w-[72vw] object-contain lg:size-72 lg:max-w-[30vw] xl:size-80 xl:max-h-[30vh]"
           />
 
           <h2 className="font-display text-xs leading-relaxed text-foreground sm:text-sm md:text-base">
