@@ -59,7 +59,7 @@ export function ProjectCard({ project, number }: ProjectCardProps) {
       ref={frontTriggerRef}
       type="button"
       aria-label={`Show details for ${project.title}`}
-      className="project-card-texture flex h-full w-full flex-col items-stretch justify-between gap-8 rounded-lg border border-foreground/15 bg-foreground/[0.03] p-5 text-start transition-colors hover:border-accent/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent sm:p-6"
+      className="project-card-texture flex h-full w-full flex-col items-stretch justify-between gap-8 rounded-lg border border-foreground/15 bg-foreground/3 p-5 text-start transition-colors hover:border-accent/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent sm:p-6"
       onClick={(event) => {
         setIsFlipped(true)
         focusAfterFlip(event, "front")
@@ -184,7 +184,7 @@ export function ProjectCard({ project, number }: ProjectCardProps) {
             aria-hidden={isFlipped}
             inert={isFlipped}
             hidden={Boolean(prefersReducedMotion && isFlipped)}
-            className="project-card-face absolute inset-0 rounded-lg"
+            className="project-card-face project-card-corners absolute inset-0 rounded-lg"
           >
             {frontFace}
           </div>
@@ -192,7 +192,7 @@ export function ProjectCard({ project, number }: ProjectCardProps) {
             aria-hidden={!isFlipped}
             inert={!isFlipped}
             hidden={Boolean(prefersReducedMotion && !isFlipped)}
-            className={`project-card-face absolute inset-0 rounded-lg${prefersReducedMotion ? "" : " project-card-face--back"}`}
+            className={`project-card-face project-card-corners absolute inset-0 rounded-lg${prefersReducedMotion ? "" : " project-card-face--back"}`}
           >
             {backFace}
           </div>

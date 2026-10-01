@@ -68,8 +68,8 @@ body,
   transform: rotateY(180deg);
 }
 
-.project-card-face::before,
-.project-card-face::after {
+.project-card-corners::before,
+.project-card-corners::after {
   position: absolute;
   z-index: 20;
   inline-size: 5px;
@@ -80,12 +80,12 @@ body,
   pointer-events: none;
 }
 
-.project-card-face::before {
+.project-card-corners::before {
   inset-block-start: 12px;
   inset-inline-start: 12px;
 }
 
-.project-card-face::after {
+.project-card-corners::after {
   inset-block-end: 12px;
   inset-inline-end: 12px;
 }

@@ -193,7 +193,7 @@ export function BeyondCode() {
                   />
                 </div>
 
-                <article className="project-card-texture min-w-0 rounded-lg border border-foreground/15 bg-foreground/[0.03] p-5 text-start sm:p-6">
+                <article className="project-card-corners project-card-texture relative min-w-0 rounded-lg border border-foreground/15 bg-foreground/3 p-5 text-start sm:p-6">
                   <h3 className="font-display text-[10px] leading-relaxed text-foreground sm:text-xs">
                     {volunteer.title}
                   </h3>
