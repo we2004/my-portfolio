@@ -4,7 +4,7 @@ import type { MouseEvent } from "react"
 const NAV_ITEMS = [
   { label: "WORK", sectionId: "work" },
   { label: "SKILLS", sectionId: "skills" },
-  { label: "COMMUNITY", sectionId: "community" },
+  { label: "VOLUNTEER", sectionId: "community" },
   { label: "CONTACT", sectionId: "contact" }
 ] as const
 

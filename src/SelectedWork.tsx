@@ -31,9 +31,8 @@ export function SelectedWork() {
       >
         <div className="mx-auto max-w-6xl">
           <h2 className="mb-8 flex flex-wrap items-center gap-3 font-display text-lg leading-relaxed sm:mb-10 sm:text-xl md:text-2xl lg:text-3xl">
-            <span>SELECTED</span>
             <span className="rounded-md bg-accent px-2 py-1 text-background">
-              PROJECTS
+              WORK
             </span>
           </h2>
 

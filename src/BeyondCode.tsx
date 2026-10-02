@@ -139,7 +139,7 @@ export function BeyondCode() {
     <section
       ref={sectionRef}
       id="community"
-      aria-label="Beyond code"
+      aria-label="Volunteer"
       className="bg-background px-4 py-16 text-foreground sm:px-6 sm:py-20 md:py-24"
     >
       <div className="mx-auto max-w-6xl">
@@ -149,7 +149,7 @@ export function BeyondCode() {
               aria-hidden="true"
               className="size-2 shrink-0 bg-accent"
             />
-            <span>BEYOND CODE</span>
+            <span>VOLUNTEER</span>
           </h2>
         </RevealOnScroll>
 

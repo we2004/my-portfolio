@@ -40,6 +40,17 @@ body,
   background-color: var(--token-color-bg);
 }
 
+/* Defensive baseline: prevent horizontal scrollbars from any future
+ * viewport-width (100vw) sizing bugs that overshoot the scrollbar gutter.
+ * Scoped to html only: setting overflow-x on both html and body leaves
+ * overflow-y unset (visible) on each, which the CSS overflow spec computes
+ * as auto on BOTH elements (a "visible" paired with a non-visible value
+ * becomes auto), turning body into a second independent scroll container
+ * with its own scrollbar. */
+html {
+  overflow-x: hidden;
+}
+
 @theme inline {
   --color-background: var(--token-color-bg);
   --color-foreground: var(--token-color-fg);
