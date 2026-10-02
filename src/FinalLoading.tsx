@@ -123,7 +123,7 @@ export function FinalLoading(): React.JSX.Element {
       <div className="flex w-full max-w-sm flex-col items-center gap-4 text-center">
         <span
           aria-live="polite"
-          className="font-ui text-xs text-foreground/70 sm:text-sm"
+          className="font-ui text-2xl text-foreground/70 sm:text-3xl"
         >
           {displayedProgress}%
         </span>
